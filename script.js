@@ -63,18 +63,18 @@ Observer.create({
 
 gotoSection(0, 1);
 
-// 
+// Indicator JS
 
 let list = document.querySelectorAll('.list');
 
-        function activeList() {
-            list.forEach((item) => 
-            item.classList.remove('active'));
+  function activeList() {
+    list.forEach((item) => 
+    item.classList.remove('active'));
 
-            this.classList.add('active');
-        }
+    this.classList.add('active');
+  }
 
-        list.forEach((item) => 
-        item.addEventListener("click", activeList))
+  list.forEach((item) => 
+  item.addEventListener("click", activeList))
 
 
