@@ -19,7 +19,6 @@ body {
   color: white !important;
   background: black !important;
   font-family: "Cormorant Garamond", serif !important;
-  text-transform: uppercase !important;
 }
 
 h2 {
@@ -31,6 +30,7 @@ h2 {
   color: #cccccc !important;
   width: 90vw !important;
   max-width: 1200px !important;
+  text-transform: uppercase !important;
 }
 
 header {
@@ -46,6 +46,7 @@ header {
   font-size: clamp(0.66rem, 2vw, 1rem) !important;
   letter-spacing: 0.5em !important;
   color: #fff !important;
+  text-transform: uppercase !important;
 }
 
 .header {
@@ -85,6 +86,8 @@ section .bg {
 }
 section .bg h2 {
   z-index: 0;
+  top: 10vh;
+  position: absolute;
 }
 
 section .bg .clip-text {
@@ -112,8 +115,20 @@ section .bg .clip-text {
   background-position: 50% 45%;
 }
 
+.sixth .bg {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url(./img/bg1.jpg);
+}
+
+.seventh .bg {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url(./img/bg2.jpg)
+}
+
 h2 * {
   will-change: transform;
+}
+
+.section-heading {
+  top: 0;
 }
 
 .container {
@@ -124,7 +139,7 @@ h2 * {
   position: absolute !important;
   display: flex !important;
   justify-content: space-between !important;
-  font-family: Consolas, 'Courier New', monospace;
+  font-family: Consolas;
 }
 
 .container .card {
@@ -181,6 +196,8 @@ h2 * {
   font-size: 1.5em;
   cursor: text;
   z-index: 5;
+  text-transform: uppercase !important;
+  font-weight: 500;
 }
 
 .container .card .face.face2 {
@@ -200,11 +217,12 @@ h2 * {
 }
 
 .container .card .face.face2 .content p {
-  margin: 0;
-  padding: 0;
+  margin: 0 !important;
+  padding: 0 !important;
   /* position: relative; */
+  line-height: 1.3em;
   color: #000;
-  /* white-space: pre-wrap; */
+  white-space: pre-wrap !important;
 }
 
 .container .card .face.face2 .content a {
@@ -217,6 +235,8 @@ h2 * {
   padding: 5px !important;
   text-transform: uppercase !important;
   transition: 0.5s !important;
+  justify-content: space-between;
+  align-items: center;
   /* border: 1px solid #333; */
 }
 
@@ -258,7 +278,7 @@ h2 * {
 
 .container .card .face.face2 .content a:hover {
   background-color: #0969fa;
-  color: #000;
+  color: #000 !important;
   box-shadow: 0 0 50px #0969fa;
   transition-delay: 0.2s;
 }
@@ -290,11 +310,14 @@ h2 * {
   position: relative;
   display: flex;
   width: 350px;
+  padding: 0;
 }
 
 .navigation ul li {
   position: relative;
   list-style: none;
+  justify-content: center;
+  align-items: center;
   width: 70px;
   height: 70px;
   z-index: 1;
@@ -315,6 +338,9 @@ h2 * {
 .navigation ul li a .icon {
   position: relative;
   display: block;
+  left: 0;
+  justify-content: center;
+  align-items: center;
   font-size: 1.5em;
   line-height: 75px;
   transition: 0.5s;
@@ -345,11 +371,9 @@ h2 * {
 
 .indicator {
   position: absolute;
-  width: 70px;
+  width: 80px;
   height: 70px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   transition: 0.5s;
 }
 
@@ -357,7 +381,7 @@ h2 * {
   content: " ";
   position: absolute;
   bottom: 13px;
-  width: 80%;
+  width: 85%;
   height: 14px;
   background: #29fd;
   border-radius: 10px;
