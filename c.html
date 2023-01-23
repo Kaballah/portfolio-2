@@ -9,7 +9,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" media="screen and (min-width: 900px)" href="./style.css">
+  <link rel="stylesheet" media="screen and (max-width: 900px)" href="smallscreen.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css'>
@@ -35,7 +36,7 @@
         <h2 class="section-heading">Skills and Projects</h2>
         
         <div class="container">
-            <div class="card">
+            <div class="card mySlides">
                 <div class="face face1">
                     <div class="content">
                         <img src="./img/atm.png" alt="ATM" style="margin-left: 40px;">
@@ -48,7 +49,7 @@
                         <p>This is an ATM Simulation designed and created in C program. It is a simple program that grants you the opportunities of an ATM Simulation. The pin being 1234</p>
     
                         <a href="https://github.com/Kaballah/atm_simulation/raw/master/sample">
-                            Download a Copy
+                            Download Copy
                         </a>
     
                         <a href="https://github.com/Kaballah/atm_simulation">
@@ -58,7 +59,7 @@
                 </div>
             </div>
     
-            <div class="card">
+            <div class="card mySlides">
                 <div class="face face1">
                     <div class="content">
                         <img src="./img/payroll.png" alt="Payroll" >
@@ -71,7 +72,7 @@
                         <p>How about a payroll system? This is another simulation but a payroll system. It allows you to calculate the payroll of your workers and send them their salaries.</p>
     
                         <a href="https://github.com/Kaballah/payroll/raw/master/payroll">
-                            Download a Copy
+                            Download Copy
                         </a>
     
                         <a href="https://github.com/Kaballah/payroll">
@@ -81,7 +82,7 @@
                 </div>
             </div>
     
-            <div class="card">
+            <div class="card mySlides">
                 <div class="face face1">
                     <div class="content">
                         <img src="./img/student.png" alt="Student Report" style="margin-left: 40px;">
@@ -94,7 +95,7 @@
                         <p>You want a student report system? I've got you for that. This system is designed to accept student's marks and calculate their results and giving them a grade according to the system.</p>
     
                         <a href="https://github.com/Kaballah/report/raw/master/report">
-                            Download a Copy
+                            Download Copy
                         </a>
     
                         <a href="https://github.com/Kaballah/report">
@@ -103,9 +104,10 @@
                     </div>
                 </div>
             </div>
-        </div>
 
-        
+            <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+            <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+        </div>
     
         <div class="navigation">
             <ul>
@@ -264,9 +266,10 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/propeller.min.js"></script>
   <script  src="./js/splittext.min.js"></script>
+  <script src="./script.js"></script>
   <script src="https://kit.fontawesome.com/e9f820d04b.js" crossorigin="anonymous"></script>
 
-  <script>
+  <!-- <script>
     gsap.registerPlugin(Observer);
 
     let sections = document.querySelectorAll("section"),
@@ -335,7 +338,38 @@
 
     list.forEach((item) => 
     item.addEventListener("click", activeList))
-  </script>
+
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+    showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+    showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+
+        if (window.innerWidth < 900) {
+
+        if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" w3-white", "");
+            }
+            x[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " w3-white";
+        }
+    }
+  </script> -->
 
 </body>
 </html>
