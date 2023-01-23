@@ -9,7 +9,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" media="screen and (min-width: 900px)" href="./style.css">
+  <link rel="stylesheet" media="screen and (max-width: 900px)" href="smallscreen.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css'>
@@ -35,7 +36,7 @@
         <h2 class="section-heading">Skills and Projects</h2>
         
         <div class="container">
-            <div class="card">
+            <div class="card mySlides">
                 <div class="face face1">
                     <div class="content">
                         <img src="./img/comp.jpg" alt="Karibu Comm. Ltd" style="margin-left: 40px;">
@@ -58,7 +59,7 @@
                 </div>
             </div>
     
-            <div class="card">
+            <div class="card mySlides">
                 <div class="face face1">
                     <div class="content">
                         <img src="./img/ticket.png" alt="Movie Ticket" style="margin-left: 40px;">
@@ -81,7 +82,7 @@
                 </div>
             </div>
     
-            <div class="card">
+            <div class="card mySlides">
                 <div class="face face1">
                     <div class="content">
                         <img src="./img/class.png" alt="Bank" style="margin-left: 40px;">
@@ -103,9 +104,10 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+            <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
         </div>
-
-        
     
         <div class="navigation">
             <ul>
@@ -264,7 +266,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/propeller.min.js"></script>
   <script  src="./js/splittext.min.js"></script>
-  <!-- <script  src="./script.js"></script> -->
+  <script  src="./script.js"></script>
   <script src="https://kit.fontawesome.com/e9f820d04b.js" crossorigin="anonymous"></script>
 
   <script>
