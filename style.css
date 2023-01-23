@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
+
 * {
   box-sizing: border-box !important;
   user-select: none !important;
@@ -401,4 +402,8 @@ h2 * {
 
 .navigation ul li:nth-child(5).active ~ .indicator {
   transform: translateX(calc(70px * 4));
+}
+
+.w3-left, .w3-right {
+  display: none;
 }
