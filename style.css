@@ -642,7 +642,6 @@ h2 * {
   overflow: hidden;
   z-index: 10;
   font-family: inherit;
-  user-select: all;
 }
 .contact main button span {
   opacity: 1;
@@ -655,7 +654,6 @@ h2 * {
   width: 200px;
   float: left;
   padding: 15px 0px;
-  user-select: all;
 }
 .contact main button svg {
   position: absolute;
