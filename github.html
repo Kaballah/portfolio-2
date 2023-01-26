@@ -75,55 +75,82 @@
                     
                     <li>
                         <div class="content">
-                            <time>1940</time> Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor, at pulvinar tortor ex eget ligula. Integer eu dapibus arcu, sit amet sollicitudin eros.
+                            <time>9th March 2020</time> Did my first Web Application intergrated with JavaScript "Todo App". Contains only the JavaScript file in it.
+                            <a href="https://github.com/Kaballah/New-todos" target="_blank">
+                              Visit Repo
+                            </a>
                         </div>
                     </li>
                     
                     <li>
                         <div class="content">
-                            <time>1943</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+                            <time>12th March 2020</time> A bit sinked in JavaScript. Did a bit of sass as well in comparison to css. This Web App is meant to help us work out our expenses.
+                            <a href="https://github.com/Kaballah/exp_redux" target="_blank">
+                              Visit Repo
+                            </a>
                         </div>
                     </li>
                     
                     <li>
                         <div class="content">
-                            <time>1946</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+                            <time>15th May 2020</time> First ever code collaboration with an organization. Wikonnect is an organization that helps you learn a ton from their website.
+                            <a href="https://github.com/Kaballah/wikonnect" target="_blank">
+                              Visit Repo
+                            </a>
                         </div>
                     </li>
                     
                     <li>
                         <div class="content">
-                            <time>1956</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+                            <time>31st January 2021</time> Began on a journey using C programming language. Not an easy language to learn, but I'm glad I did.
+                            <a href="https://github.com/Kaballah/C-language" target="_blank">
+                              Visit Repo
+                            </a>
                         </div>
                     </li>
                     
                     <li>
                         <div class="content">
-                            <time>1957</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+                            <time>16th April 2021</time> Got interested in Ethical Hacking and decided to dive into being a script kiddie. Did some repo forking and cloning such as Vulva and Cupp.
+                            <a href="https://github.com/Kaballah/vulnx" target="_blank">
+                              Visit Repo
+                            </a>
                         </div>
                     </li>
                     
                     <li>
                         <div class="content">
-                            <time>1967</time> Aenean condimentum odio a bibendum rhoncus. Ut mauris felis, volutpat eget porta faucibus, euismod quis ante.
+                            <time>17th October 2022</time> I had to do a school project and that made me get interested in PHP. Not a really tough language but I got a chance of try it out.
+                            <a href="https://github.com/Kaballah/Class-Attendance-Trial-1" target="_blank">
+                              Visit Repo
+                            </a>
                         </div>
                     </li>
                     
                     <li>
                         <div class="content">
-                            <time>1977</time> Vestibulum porttitor lorem sed pharetra dignissim. Nulla maximus, dui a tristique iaculis, quam dolor convallis enim, non dignissim ligula ipsum a turpis.
+                            <time>23rd October 2022</time> I got a Kali Net Hunter repo and I had to clone it for the future. I had to try to install the Net Hunter as an Operating System for my Android device.
+                            <a href="https://github.com/Kaballah/123" target="_blank">
+                              Visit Repo
+                            </a>
                         </div>
                     </li>
                     
                     <li>
                         <div class="content">
-                            <time>1985</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+                            <time>17th November 2022</time> I decided to take a turn for Android Development using Java Language. Surprisingly it wasn't that tough since you can design the UI with ease.
+                            <a href="https://github.com/Kaballah/Camera-application" target="_blank">
+                              Visit Repo
+                            </a>
                         </div>
                     </li>
                     
                     <li>
                         <div class="content">
-                            <time>2000</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+                            <time>26th December 2022</time> Was done with my school project, which was to design a class attendance system for KCA University. Took me a while to understand PHP.
+                            <a href="https://github.com/Kaballah/KCA-Class-Attendance-Management-System" target="_blank">
+                              Visit Repo
+                            </a>
                         </div>
                     </li>
                     
@@ -394,6 +421,18 @@ function setKeyboardFn(prev, next) {
   <script type="text/javascript" src="js/propeller.min.js"></script>
   <script  src="./js/splittext.min.js"></script>
   <script src="https://kit.fontawesome.com/e9f820d04b.js" crossorigin="anonymous"></script>
+
+  <script>
+    document.onreadystatechange = function() {
+      if (document.readyState !== "complete") {
+          document.querySelector("body").style.visibility = "hidden";
+          document.querySelector(".loader").style.visibility = "visible";
+      } else {
+          document.querySelector(".loader").style.display = "none";
+          document.querySelector("body").style.visibility = "visible";
+      }
+    };
+  </script>
 
   <script>
     gsap.registerPlugin(Observer);
