@@ -165,7 +165,7 @@ body {
 
 /* GENERAL MEDIA QUERIES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-@media screen and (max-width: 599px) {
+/* @media screen and (max-width: 599px) {
   .timeline ol,
   .timeline ol li {
     width: auto; 
@@ -220,7 +220,7 @@ body {
   .timeline .arrows {
     display: none;
   }
-}
+} */
 
 section .bg {
     overflow: hidden;
