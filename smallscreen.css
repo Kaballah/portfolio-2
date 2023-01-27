@@ -522,6 +522,7 @@ h2 * {
   width: 100%;
   height: 100vh;
   position: relative;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 .contact {
@@ -530,7 +531,13 @@ h2 * {
   padding: 40px 20px;
   overflow: hidden;
   margin: 0 auto;
+  top: 15%;
 }
+
+.contact-wide {
+  display: none;
+}
+
 @media (min-width: 1024px) {
   .contact {
     position: absolute;
@@ -670,7 +677,7 @@ h2 * {
   overflow: hidden;
   z-index: 10;
   font-family: inherit;
-  user-select: all;
+  cursor: pointer;
 }
 .contact main button span {
   opacity: 1;
@@ -683,7 +690,6 @@ h2 * {
   width: 200px;
   float: left;
   padding: 15px 0px;
-  user-select: all;
 }
 .contact main button svg {
   position: absolute;
@@ -724,15 +730,20 @@ h2 * {
   opacity: 1;
   transition-delay: 0.5s;
 }
-.contact nav {
+.contact .left {
   float: left;
-  width: 100%;
+  width: 40%;
   overflow: hidden;
   max-height: 0px;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
+}
+
+.contact .right {
+  float: right;
+  width: 40%;
 }
 .contact nav.active {
   max-height: 600px;
@@ -803,21 +814,30 @@ h2 * {
 .contact nav a.gmail .icon svg {
   background-color: #d14836;
 }
-.contact nav a.gmail .content h1 {
-  color: #d14836;
+
+.contact nav a.github .icon svg {
+  background-color: #acacac;
+  padding: 0;
 }
-.contact nav a.facebook .icon svg {
-  background-color: #3b5998;
+.contact nav a.linkedin .icon svg {
+  background-color: #0065a3;
 }
-.contact nav a.facebook .content h1 {
-  color: #3b5998;
-}
+
 .contact nav a.twitter .icon svg {
-  background-color: #1da1f2;
+  background-color: #42aff3;
+  padding: 0;
 }
-.contact nav a.twitter .content h1 {
-  color: #1da1f2;
+
+.contact nav a.instagram .icon svg {
+  /* background-color: #42aff3; */
+  padding: 0;
 }
+
+.contact nav a.telegram .icon svg {
+  background-color: #238aca;
+  padding: 0;
+}
+
 .contact nav a .icon {
   float: left;
   width: 50px;
@@ -836,6 +856,8 @@ h2 * {
 }
 .contact nav a .content h1 {
   font-size: 20px;
+  padding: 0%;
+  margin: 0;
   font-weight: 400;
   line-height: 160%;
   letter-spacing: 0.4px;
