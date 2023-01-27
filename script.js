@@ -133,7 +133,7 @@ function showDivs(n) {
 
 // Contact Me Button
 
-$('button').click(function(){
+$('#button').click(function(){
   $('button').toggleClass('active');
   $('.title').toggleClass('active');
   $('nav').toggleClass('active');
