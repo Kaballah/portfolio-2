@@ -48,6 +48,23 @@
         <div class="inner">
           <div class="bg one">
             <h2 class="section-heading">Home</h2>
+
+            <div class="content2">
+
+              <div class="content3">
+
+                <h1>Hello there, Ronnie here</h1>
+                
+                <p href="" class="typewrite" data-period="2000" data-type='["I am a Web Developer", "I am a Mobile Programmer"]'>
+                  <span class="wrap"></span>
+                </p>
+              </div>
+
+              <div class="home-img">
+                <img src="./img/img.svg" alt="Coding">
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -60,6 +77,50 @@
         <div class="inner">
           <div class="bg">
             <h2 class="section-heading">About Me</h2>
+
+            <div class="content4">
+              <div class="brief">
+                <h1>Briefings</h1>
+              </div>
+  
+              <div class="content5">
+                <p>I'm a 22 year old student at KCA University. Currently persuing my Bachelors of Science in Computer Security and Forensics. I did my Web Development course back in 2020 at LakeHub Academy. Where I did manage to understand the art of JavaScript, MongoDB, Postman, React, NPM, NodeJS and many more frameworks. PHP was a self-taught language and a very ineresting one. So far I</p>
+              </div>
+  
+              <div class="hobby">
+                <h1>Hobbies</h1>
+              </div>
+  
+              <div class="tools">
+                <h1>Tools Interacted with</h1>
+                
+                <div class="svg">
+                  <img src="./img/android-original.svg" alt="Android" style="width: 60px; height: 60px;" title="Android">
+                  <img src="./img/androidstudio-original.svg" alt="Android Studio" style="width: 60px; height: 60px;" title="Android Studio">
+                  <img src="./img/apache-original-wordmark.svg" alt="Apache" style="width: 60px; height: 60px;" title="Apache">
+                  <img src="./img/debian-original.svg" alt="Debian" style="width: 60px; height: 60px;" title="Debian">
+                  <img src="./img/firebase-plain.svg" alt="Firebase" style="width: 60px; height: 60px;" title="Firebase">
+                  <img src="./img/gcc-original.svg" alt="GCC" style="width: 60px; height: 60px;" title="GCC">
+                  <img src="./img/github-original-wordmark.svg" alt="Github" style="width: 60px; height: 60px;" title="Github">
+                  <img src="./img/mysql-original-wordmark.svg" alt="MySQL" style="width: 60px; height: 60px;" title="MySQL">
+                  <img src="./img/raspberrypi-original.svg" alt="Raspberry PI" style="width: 60px; height: 60px;" title="Raspberry Pi">
+                  <img src="./img/vscode-original.svg" alt="VS Code" style="width: 60px; height: 60px;" >
+                </div>
+              </div>
+  
+              <div class="lang">
+                <h1>Languages Learnt</h1>
+                <div class="svg">
+                  <img src="./img/html5-original.svg" alt="HTML5" style="width: 60px; height: 60px;" title="HTML5">
+                  <img src="./img/css3-original.svg" alt="CSS3" style="width: 60px; height: 60px;" title="CSS3">
+                  <img src="./img/javascript-original.svg" alt="JavaScript" style="width: 60px; height: 60px;" title="JavaScript">
+                  <img src="./img/bootstrap-original.svg" alt="Bootstrap" style="width: 60px; height: 60px;" title="Bootstrap">
+                  <img src="./img/c-original.svg" alt="C" style="width: 60px; height: 60px;" title="C">
+                  <img src="./img/php-original.svg" alt="PHP" style="width: 60px; height: 60px;" title="PHP">
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -436,6 +497,65 @@
   <script src="https://kit.fontawesome.com/e9f820d04b.js" crossorigin="anonymous"></script>
 
   <script>
+
+var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+
+
 
     $('button').click(function(){
       $('button').toggleClass('active');
