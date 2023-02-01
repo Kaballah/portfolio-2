@@ -3,6 +3,7 @@
 @import url('https://fonts.cdnfonts.com/css/anurati');
 @import url('https://fonts.cdnfonts.com/css/dune-rise');
 @import url('https://fonts.cdnfonts.com/css/azonix');
+@import url('https://fonts.cdnfonts.com/css/gepestev');
                 
 /* 
 :root {
@@ -286,6 +287,88 @@ h2 * {
   right: 0;
   width: 60vw;
   height: 100vh;
+}
+
+.content4 {
+  display: none;
+}
+
+table {
+  width:100%; 
+  height: 90%; 
+  top: 25%; 
+  position: absolute;
+}
+
+table tr td {
+  padding-left: 6%;
+}
+
+table tr td .brief {
+  width: 50vw;
+  height: 100%;
+}
+
+table tr td .brief h1 {
+  text-transform: uppercase;
+  font-size: 40px;
+  justify-content: center;
+  display: flex;
+  font-family: 'Azonix', sans-serif;
+}
+
+table tr td .brief p {
+  font-size: 20px;
+  justify-content: center;
+  text-align: justify;
+  font-family: 'GepesteV', sans-serif;
+}
+
+table tr td .hobby {
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+table tr td .hobby h1 {
+  text-transform: uppercase;
+  font-size: 40px;
+  justify-content: center;
+  display: flex;
+  font-family: 'Azonix', sans-serif;
+}
+
+table tr td .hobby li {
+  font-size: 20px;
+  justify-content: center;
+  text-align: justify;
+  font-family: 'GepesteV', sans-serif;
+}
+
+table tr td .tools {
+  width: 50vw;
+  height: 50vh;
+}
+
+table tr td .tools h1 {
+  text-transform: uppercase;
+  font-size: 40px;
+  justify-content: center;
+  display: flex;
+  font-family: 'Azonix', sans-serif;
+}
+
+table tr td .lang {
+  width: 100%;
+  height: 50vh;
+}
+
+table tr td .lang h1 {
+  text-transform: uppercase;
+  font-size: 40px;
+  justify-content: center;
+  display: flex;
+  font-family: 'Azonix', sans-serif;
 }
 
 .container {
