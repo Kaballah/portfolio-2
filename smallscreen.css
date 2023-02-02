@@ -264,26 +264,74 @@ table {
   display: none;
 }
 
+.content4 .brief h1 {
+  text-transform: uppercase;
+  font-size: 25px;
+  justify-content: center;
+  display: flex;
+  font-family: 'Azonix', sans-serif;
+  padding-top: 50px;
+}
+
+.content4 .brief p {
+  font-size: 15px;
+  justify-content: center;
+  text-align: justify;
+  padding: 10px;
+  font-family: 'GepesteV', sans-serif;
+}
+
+.content4 .hobby h1 {
+  text-transform: uppercase;
+  font-size: 25px;
+  justify-content: center;
+  display: flex;
+  font-family: 'Azonix', sans-serif;
+}
+
+.content4 .hobby li {
+  font-size: 15px;
+  justify-content: center;
+  text-align: justify;
+  font-family: 'GepesteV', sans-serif;
+}
+
 .content4 .tools {
   position: relative;
   overflow: hidden;
 }
 
+.content4 .tools h1 {
+  text-transform: uppercase;
+  font-size: 25px;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  font-family: 'Azonix', sans-serif;
+}
+
 .tools .svg {
-  /* background: url("./img/android-original.svg") repeat-x; */
   position: relative;
-  /* overflow: hidden; */
   left: 0;
   top: 0;
   height: 100%;
   width: 300%;
   transform: translate3d(0, 0, 0);
-  animation: slideshow 30s linear infinite;
+  animation: slideshow 15s linear infinite;
 }
 
 .content4 .lang {
   position: relative;
   overflow: hidden;
+}
+
+.content4 .lang h1 {
+  text-transform: uppercase;
+  font-size: 25px;
+  justify-content: center;
+  display: flex;
+  font-family: 'Azonix', sans-serif;
+  padding-top: 10px;
 }
 
 .lang .svg {
@@ -294,25 +342,20 @@ table {
   top: 0;
   height: 100%;
   width: 300%;
-  animation: slideshow 60s linear infinite;
+  animation: slideshow 30s 0s linear infinite;
   transform: translate3d(0, 0, 0);
-  mask-border-repeat: all;
 }
 
 @keyframes slideshow {
-  0%    { 
+  0% { 
     /* left: 0; */
     transform: translateX(0);
   }
-  80% {
-    transform: translateX(calc(-250px * 10));
-    -webkit-transform: translateX(calc(-250px * 10)); 
-  }
-  100%  { 
+  100% { 
     /* left: -200%; */
     /* -webkit-transform: translateX(-200%);  */
-    /* transform: translateX(calc(-250px * 7)); */
-    transform: translateX(0);
+    transform: translateX(calc(-250px * 7));
+    animation-duration: 0;
   }
 }
 
