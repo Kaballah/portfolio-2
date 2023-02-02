@@ -740,4 +740,101 @@ a.telegram .icon svg {
   margin-right: 0%;
 }
 
+.contact-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-container h1 {
+  text-transform: uppercase;
+  font-size: 40px;
+  justify-content: center;
+  display: flex;
+  font-family: 'Azonix', sans-serif;
+}
+
+.form-container {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  width: 900px;
+  margin: 50px auto;
+}
+
+.form-item {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  font-size: 16px;
+  width: 80%;
+}
+
+textarea {
+  height: 150px;
+  resize: none;
+}
+
+input[type="submit"] {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.social-icons {
+  /* display: flex; */
+  margin-top: 20px;
+  padding-right: 10%;
+  float: right;
+  right: 0;
+  position: absolute;
+}
+
+.social-icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.social-icon.gmail {
+  background-image: url(./img/gmail-icon-logo-svgrepo-com.svg);
+}
+
+.social-icon.github {
+  background-image: url(./img/github-original-wordmark.svg);
+}
+
+.social-icon.twitter {
+  background-image: url(./img/twitter-color-svgrepo-com.svg);
+}
+
+.social-icon.linkedin {
+  background-image: url(./img/linkedin-svgrepo-com.svg);
+}
+
+.social-icon.instagram {
+  background-image: url(./img/instagram-1-svgrepo-com.svg);
+}
+
+.social-icon.telegram {
+  background-image: url(./img/telegram-svgrepo-com.svg);
+}
+
 
